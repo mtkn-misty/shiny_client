@@ -1,0 +1,97 @@
+
+.draggable{
+    z-index: 10;
+}
+
+.draggable[disabled]{
+    color: #999999;
+    background-color: #eeeeee;
+}
+
+.droppable{
+    background-color: rgba(86,61,124,.15);
+    border: 1px solid rgba(86,61,124,.2);
+    border-radius: 10px;
+    margin: 5px;
+
+    font-size: 18px;
+    font-family: inherit;
+    color: rgba(86,61,124,1);
+    text-align: center;
+    vertical-align: middle;
+}
+
+.droppable.appended{
+    border: 1px solid rgba(91, 192, 222, .4);
+    background-color: rgba(91, 192, 222, .35);
+    color: #000000;
+}
+
+.droppable.ui-state-active-org{
+    background-color: #fcf8e3;
+    border-color: #f0ad4e;
+}
+.droppable.ui-state-hover-org {
+    background: #dff0d8;
+    border-color: #d0e0c8;
+}
+
+
+.droppable[disabled]{
+    color: #999999;
+    background-color: #eeeeee;
+    border: 1px solid #ddd;
+}
+
+body{
+    margin-left: 18px;
+    margin-top: 4px;
+}
+
+#variableArea{
+    margin: 5px;
+    margin-left: 18px;
+
+}
+#yaxis {
+    width: 48px;
+    height: 180px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 8px;
+}
+#yaxis div {
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: rotate(-90deg);
+    position: absolute;
+    width: 180px;
+    top: 180px;
+}
+
+#xaxis {
+    width: 180px;
+    height: 48px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#color {
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 180px;
+    height: 180px;
+}
+
+#color div{
+    position: absolute;
+    top: 80px;
+    width: 100%;;
+}
+
+#empty {
+    height: 48px;
+    width: 48px;
+    margin: 5px;
+}

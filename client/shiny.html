@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+
+  <link rel="stylesheet" type="text/css" href="./shiny.css"/>
+  <title>Shiny Custom Client</title>
+</head>
+<body>
+<h1>Shiny Custom Client</h1>
+
+<div id="chartType" class="btn-group" data-toggle="buttons">
+  <label class="btn btn-primary active" data-type="hist">
+    <input type="radio" name="options" id="hist"> ヒストグラム
+  </label>
+  <label class="btn btn-primary" data-type="scatter">
+    <input type="radio" name="options" id="scatter"> 散布図
+  </label>
+  <label class="btn btn-primary" data-type="bubble">
+    <input type="radio" name="options" id="bubble"> バブルチャート
+  </label>
+  <label class="btn btn-primary" data-type="line">
+    <input type="radio" name="options" id="line"> 折れ線グラフ
+  </label>
+  <label class="btn btn-primary" data-type="boxplot">
+    <input type="radio" name="options" id="boxplot"> 箱ひげ図
+  </label>
+</div>
+
+<div class="row">
+  <div id="variableArea" class="col-md-2 list-group">
+    <a href="#" class="list-group-item draggable" data-name="Species" data-type="factor">Species</a>
+    <a href="#" class="list-group-item draggable" data-name="Sepal.Length" data-type="numeric">Sepal.Length</a>
+    <a href="#" class="list-group-item draggable" data-name="Sepal.Width" data-type="numeric">Sepal.Width</a>
+    <a href="#" class="list-group-item draggable" data-name="Petal.Length" data-type="numeric">Petal.Length</a>
+    <a href="#" class="list-group-item draggable" data-name="Petal.Width" data-type="numeric">Petal.Width</a>
+  </div>
+
+  <div id="chartArea" class="col-md-5">
+    <div class="row">
+      <div id="yaxis" class="col-md-1 droppable" data-type="yaxis"><div>Y軸</div></div>
+      <div id="color" class="col-md-5 droppable" data-type="color"><div>色/サイズ</div></div>
+    </div>
+    <div class="row">
+      <div id="empty" class="col-md-1"></div>
+      <div id="xaxis" class="col-md-5 droppable" data-type="xaxis"><div>X軸</div></div>
+    </div>
+  </div>
+</div>
+<div>
+  <image id="chartImg"/>
+</div>
+
+<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.6.0/underscore-min.js"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/socket.io/0.9.16/socket.io.min.js"></script>
+<script src="./shiny.js"></script>
+
+</body>
+</html>
