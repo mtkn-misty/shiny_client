@@ -48,6 +48,7 @@ $(function(){
     $('#xaxis div').text('X軸');
     $('#color div').text('色/サイズ');
     $('#chartArea div').removeClass('appended');
+    $('#chartImg').attr('src', '');
 
     setTimeout(function(){
       status.chartType = $('#chartType label.active').data('type');
