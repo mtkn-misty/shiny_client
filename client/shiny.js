@@ -84,17 +84,18 @@ $(function(){
 
   //グラフ描画のためのデータ送信
   var sendChartInfo = function(){
-    var json = {};
-    json.method = 'init';
-    json.data = {
-      '.clientdata_allowDataUriScheme': true,
-      '.clientdata_output_chartPlot_hidden': false,
-      '.clientdata_output_chartPlot_width': 400,
-      '.clientdata_output_chartPlot_height': 280,
-      'xaxis': status.xaxis,
-      'yaxis': status.yaxis,
-      'color': status.color,
-      'chartType': status.chartType
+    var json = {
+      method: 'init',
+      data: {
+        '.clientdata_allowDataUriScheme': true,
+        '.clientdata_output_chartPlot_hidden': false,
+        '.clientdata_output_chartPlot_width': 400,
+        '.clientdata_output_chartPlot_height': 280,
+        'xaxis': status.xaxis,
+        'yaxis': status.yaxis,
+        'color': status.color,
+        'chartType': status.chartType
+      }
     };
 
     //データ送信
