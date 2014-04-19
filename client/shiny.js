@@ -87,16 +87,15 @@ $(function(){
     var json = {};
     json.method = 'init';
     json.data = {
-      '.clientdata_allowDataUriScheme': true
+      '.clientdata_allowDataUriScheme': true,
+      '.clientdata_output_chartPlot_hidden': false,
+      '.clientdata_output_chartPlot_width': 400,
+      '.clientdata_output_chartPlot_height': 280,
+      'xaxis': status.xaxis,
+      'yaxis': status.yaxis,
+      'color': status.color,
+      'chartType': status.chartType
     };
-
-    json.data['.clientdata_output_chartPlot_hidden'] = false;
-    json.data['.clientdata_output_chartPlot_width'] = 400;
-    json.data['.clientdata_output_chartPlot_height'] = 280;
-    json.data['xaxis'] = status.xaxis;
-    json.data['yaxis'] = status.yaxis;
-    json.data['color'] = status.color;
-    json.data['chartType'] = status.chartType;
 
     //データ送信
     console.log(['SEND',json]);
